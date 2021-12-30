@@ -4,7 +4,6 @@ import main.java.com.melih.utils.LogUtil;
 
 public class UserClient implements Runnable {
     private static final String NAME = "User Client";
-    private Thread thread;
 
     public UserClient() {
         super();
@@ -14,7 +13,7 @@ public class UserClient implements Runnable {
     public void run() {
         LogUtil.getInstance().logInfo(UserClient.NAME + " is up and running.");
         try {
-            for (int i = 0; i < 0; i++) {
+            for (int i = 0; i < 20; i++) {
                 LogUtil.getInstance().logInfo(UserClient.NAME + "-counter: " + i);
                 Thread.sleep(1500);
             }
